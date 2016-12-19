@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Emacs. I have used it before.
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Atom. I have been using it and it is already installed on my computer. I like the file system browser and the fact that you can split your workspace into multiple frames. cmd-b is useful shortcut for browing through open files/tabs. cmd-l is useful for selecting entire lines. Atom has themes and packages that need to be that can be downloaded and installed to customize the editor. Packages increase functioanlity whereas themes are visual changes to the UI.
 
  
