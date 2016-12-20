@@ -48,7 +48,7 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> Python 2. It's the default in MAC.
+>> Python 2.7.12. It's the default in MAC.
 
 ###Q2. Which Python Version Installed   
 
