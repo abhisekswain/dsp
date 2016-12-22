@@ -35,7 +35,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > **ls** - list with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links  
+**ls -a** - lists all files including those that are hidden    
+**ls -l** - long format. Provides a list showing the permissions, number of inodes, the owner and the group, the file size, the last accessed date and time and file name    
+**ls -lh** -  lists file in long format in byte sized chunks    
+**ls -lah** - lists all files including hidden ones in long format in byte sized chunks  
+**ls -t** - sorts files according to modification time (newest first)    
+**ls -Glp** - lists files in long format, does not display group name and directories are marked by appending / to them
+
 
 ---
 
