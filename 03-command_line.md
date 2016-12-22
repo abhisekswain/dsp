@@ -50,7 +50,12 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > **ls –d:** Displays only directories   
+**ls –m:** Displays the names as a comma-separated list  
+**ls – R:** Displays subdirectories as well  
+**ls –x:** Displays files as rows across the screen  
+**ls –u:** Displays file by access time  
+
 
 ---
 
