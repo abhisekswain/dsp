@@ -9,7 +9,18 @@ tutorial](https://web.archive.org/web/20160708171659/http://cli.learncodethehard
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+**⌘Cmd + K:** Clears the screen  
+**Top:** Displays active processes. Press q to quit  
+**less:** Deliver output of file in screen size chunks  
+**[command-a] | [command-b]:** Run command A and pipe output to command B  
+**[command] > [file]:** Push output to file, it will get overwritten  
+**[command] > >[file]:** Append output to existing file  
+**pushd:** saves the current working directory in memory so it can be returned to at any time  
+**popd:** returns to the path at the top of the directory stack  
+**cat [options[ [filenames]:** reads files sequentially, writing them to standard output  
+**grep “literal string” filename:** searches for specific string in file  
+
 
 ---
 
