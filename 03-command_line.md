@@ -66,14 +66,14 @@ What does `xargs` do? Give an example of how to use it.
 > > The xargs command (by default) expects the input from stdin, and executes /bin/echo command over the input. The following is what happens when you execute xargs without any argument, or when you execute it without combining with any other commands.
 When you type xargs without any argument, it will prompt you to enter the input through stdin:  
 
-$ xargs
-Hi,
-Welcome to TGS.  
+$ xargs  
+Hi,  
+Welcome to TGS.    
 
 After you type something, press ctrl+d, which will echo the string back to you on stdout as shown below.  
 
-$ xargs
-Hi,
+$ xargs  
+Hi,  
 Welcome to TGS.Hi, Welcome to TGS.
 
 
