@@ -45,13 +45,13 @@ Differences:
 3. Sets can only contain hashable elements
 
 List e.g.
->> Names_list = [“Jack”, “John”, “Mary”, “Tim”, “John”]
->> print Names_list
-Output: ['Jack', 'John', 'Mary', 'Tim', 'John']
+>> Names_list = [“Jack”, “John”, “Mary”, “Tim”, “John”]  
+>> print Names_list  
+Output: ['Jack', 'John', 'Mary', 'Tim', 'John']  
 
->> Names_set = (["Jack", "John", "Mary", "Tim", "John"])
->> print Names_set
-Output: Set(['Tim', 'John', 'Jack', 'Mary'])
+>> Names_set = (["Jack", "John", "Mary", "Tim", "John"])  
+>> print Names_set  
+Output: Set(['Tim', 'John', 'Jack', 'Mary'])  
 
 Sets are much faster than lists for finding an element. In a set, the search operation has a speed of O(1), whereas in a list the search operation takes O(logN). This kind of speed is accomplished through the use of an open address hash table as the underlying data structure.
 
@@ -62,7 +62,19 @@ Sets are much faster than lists for finding an element. In a set, the search ope
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> lambda is a construct in Python used for creating anonymous functions at runtime. We use lambda functions when we require a nameless function for a short period of time. In Python, we generally use lambda as an argument to a higher-order function (a function that takes in other functions as arguments). Lambda functions are used along with built-in functions like filter(), map() and reduce().  
+
+An example of using lambda in the key argument is given below:
+
+>> word_list = ['lowercase', 'words', 'sort', 'Uppercase']
+>> sorted (word_list)
+['Uppercase', 'lowercase', 'sort', 'words']
+
+The sorted function sorts uppercased words before words that are lowercased as shown above. However, we can lowercase all the words before sorting using lambda as shown below:
+
+>> sorted ([word_list, key=lambda word: word.lower())
+['lowercase', 'sort', 'Uppercase', 'words']
+
 
 ---
 
