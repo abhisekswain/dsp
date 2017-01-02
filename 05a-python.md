@@ -15,8 +15,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 >> Similarities:  
    1. Both lists and tuples allow for duplicates     
    2. Both lists and tuples can be indexed, sliced and selected using integer values within brackets.    
-   3. Two tuples or two lists are both compared by their first element, and if there is a tie, then by the second element, and       so on. No further attention is paid to subsequent elements after earlier elements show a difference.  
-   
+   3. Two tuples or two lists are both compared by their first element, and if there is a tie, then by the second element, and       so on. No further attention is paid to subsequent elements after earlier elements show a difference.     
    Differences:  
    1. Tuple are immutable whereas lists are mutable  
    2. Lists are enclosed in square brackets, whereas tuples are enclosed in parenthesis  
