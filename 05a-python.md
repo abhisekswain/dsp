@@ -82,7 +82,53 @@ The sorted function sorts uppercased words before words that are lowercased as s
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are much simpler ways of creating lists. For example, consider the list
+{ x^2: x is a natural number less than 10 } 
+
+squares = []
+for i in range(10):
+    squares.append(i**2)
+print squares
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Using list comprehensions this can be done in a faster and in a simpler way as shown below:
+
+squares = [x**2 for x in range(10)]
+print squares
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+The map equivalent of the above is:
+
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+squares = map (lambda x: x**2, array)
+print squares
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+List comprehension are faster in terms of runtime than for loops and map functions.
+
+If we wanted a list with just the squares of the even numbers, the filter function can be used:
+
+squares_even = filter(lambda x: x is not None,map(lambda x: x**2 if x%2==0 else None, array))
+print squares_even
+
+Output: [4, 16, 36, 64]
+
+Example of set comprehension:
+
+square_set = {x**2 for x in range(10)}
+print square_set
+
+Output: set ([0, 1, 4, 81, 64, 9, 16, 49, 25, 36])
+
+Example of dict comprehension:
+
+squares_dict = dict([(i, i**2) for i in range(10)])
+print squares_dict
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
 
 ---
 
