@@ -14,15 +14,15 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 >> Similarities:  
    
-   1. Both lists and tuples allow for duplicates     
-   2. Both lists and tuples can be indexed, sliced and selected using integer values within brackets.    
-   3. Two tuples or two lists are both compared by their first element, and if there is a tie, then by the second element, and       so on. No further attention is paid to subsequent elements after earlier elements show a difference.         
+   . Both lists and tuples allow for duplicates     
+   . Both lists and tuples can be indexed, sliced and selected using integer values within brackets.    
+   . Two tuples or two lists are both compared by their first element, and if there is a tie, then by the second element, and       so on. No further attention is paid to subsequent elements after earlier elements show a difference.         
    
    Differences: 
    
-   1. Tuple are immutable whereas lists are mutable  
-   2. Lists are enclosed in square brackets, whereas tuples are enclosed in parenthesis  
-   3. Tuple have heterogeneous data, whereas lists are homogenous  
+   . Tuple are immutable whereas lists are mutable  
+   . Lists are enclosed in square brackets, whereas tuples are enclosed in parenthesis  
+   . Tuple have heterogeneous data, whereas lists are homogenous  
    
    Tuples work as keys in dictionaries, primarily because they are immutable.  
 
@@ -35,14 +35,14 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> Similarities:  
   
-   1. Both are collections of objects.  
-   2. Both lists and sets support append and pop operations  
+   . Both are collections of objects.  
+   . Both lists and sets support append and pop operations  
    
    Differences:  
    
-   1. Sets can’t have duplicate elements whereas lists can  
-   2. Sets are unordered and immutable whereas lists are not  
-   3. Sets can only contain hashable elements  
+   . Sets can’t have duplicate elements whereas lists can  
+   . Sets are unordered and immutable whereas lists are not  
+   . Sets can only contain hashable elements  
    
    List e.g.  
    >> Names_list = [“Jack”, “John”, “Mary”, “Tim”, “John”]  
