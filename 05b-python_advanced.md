@@ -33,7 +33,10 @@ BSEd: 1
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are 3 title as shown below along with their frequebcies of occurence.  
+Assistant Professor: 12  
+Associate Professor: 12  
+Professor: 13  
 
 
 ####Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
@@ -79,7 +82,12 @@ weiyang@mail.med.upenn.edu
 
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are 4 email domains as listed below.  
+@mail.med.upenn.edu  
+@upenn.edu  
+@email.chop.edu  
+@cceb.med.upenn.edu  
+
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
