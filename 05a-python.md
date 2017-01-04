@@ -12,7 +12,20 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Similarities:  
+   
+   . Both lists and tuples allow for duplicates     
+   . Both lists and tuples can be indexed, sliced and selected using integer values within brackets.    
+   . Two tuples or two lists are both compared by their first element, and if there is a tie, then by the second element, and       so on. No further attention is paid to subsequent elements after earlier elements show a difference.         
+   
+   Differences: 
+   
+   . Tuple are immutable whereas lists are mutable  
+   . Lists are enclosed in square brackets, whereas tuples are enclosed in parenthesis  
+   . Tuple have heterogeneous data, whereas lists are homogenous  
+   
+   Tuples work as keys in dictionaries, primarily because they are immutable.  
+
 
 ---
 
@@ -20,7 +33,28 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Similarities:  
+  
+   . Both are collections of objects.  
+   . Both lists and sets support append and pop operations  
+   
+   Differences:  
+   
+   . Sets can’t have duplicate elements whereas lists can  
+   . Sets are unordered and immutable whereas lists are not  
+   . Sets can only contain hashable elements  
+   
+   List e.g.  
+   >> Names_list = [“Jack”, “John”, “Mary”, “Tim”, “John”]    
+   >> print Names_list  
+   Output: ['Jack', 'John', 'Mary', 'Tim', 'John']  
+   
+   >> Names_set = (["Jack", "John", "Mary", "Tim", "John"])  
+   >> print Names_set  
+   Output: Set(['Tim', 'John', 'Jack', 'Mary'])  
+   
+   Sets are much faster than lists for finding an element. In a set, the search operation has a speed of O(1), whereas in a      list the search operation takes O(logN). This kind of speed is accomplished through the use of an open address hash table      as the underlying data structure.  
+
 
 ---
 
@@ -28,7 +62,19 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>lambda is a construct in Python used for creating anonymous functions at runtime. We use lambda functions when we require a nameless function for a short period of time. In Python, we generally use lambda as an argument to a higher-order function (a function that takes in other functions as arguments). Lambda functions are used along with built-in functions like filter(), map() and reduce().  
+
+An example of using lambda in the key argument is given below:
+
+>> word_list = ['lowercase', 'words', 'sort', 'Uppercase']  
+>> sorted (word_list)  
+['Uppercase', 'lowercase', 'sort', 'words']  
+
+The sorted function sorts uppercased words before words that are lowercased as shown above. However, we can lowercase all the words before sorting using lambda as shown below:
+
+>> sorted ([word_list, key=lambda word: word.lower())  
+['lowercase', 'sort', 'Uppercase', 'words']  
+
 
 ---
 
@@ -36,7 +82,53 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are much simpler ways of creating lists. For example, consider the list
+{ x^2: x is a natural number less than 10 } 
+
+squares = []  
+for i in range(10):  
+    squares.append(i**2)  
+print squares  
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+
+Using list comprehensions this can be done in a faster and in a simpler way as shown below:
+
+squares = [x**2 for x in range(10)]  
+print squares  
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+
+The map equivalent of the above is:
+
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9]  
+squares = map (lambda x: x**2, array)  
+print squares  
+
+Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+
+List comprehension are faster in terms of runtime than for loops and map functions.
+
+If we wanted a list with just the squares of the even numbers, the filter function can be used:
+
+squares_even = filter(lambda x: x is not None,map(lambda x: x**2 if x%2==0 else None, array))  
+print squares_even  
+
+Output: [4, 16, 36, 64]  
+
+Example of set comprehension:
+
+square_set = {x**2 for x in range(10)}  
+print square_set  
+
+Output: set ([0, 1, 4, 81, 64, 9, 16, 49, 25, 36])  
+
+Example of dict comprehension:
+
+squares_dict = dict([(i, i**2) for i in range(10)])  
+print squares_dict  
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}  
+
 
 ---
 
