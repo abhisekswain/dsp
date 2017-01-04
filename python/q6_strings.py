@@ -8,7 +8,6 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,6 +17,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count >= 10:
+        return("Number of donuts: many")
+    else:
+        return("Number of donuts:" + str(count))
     raise NotImplementedError
 
 
@@ -27,7 +30,6 @@ def both_ends(s):
     2 chars of the original string, so 'spring' yields 'spng'.
     However, if the string length is less than 2, return instead the
     empty string.
-
     >>> both_ends('spring')
     'spng'
     >>> both_ends('Hello')
@@ -37,6 +39,11 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if len(s) < 2:
+        return("")
+    else:
+        modified_string = s[0:2] + s[-2:]
+        return(modified_string)
     raise NotImplementedError
 
 
@@ -46,7 +53,6 @@ def fix_start(s):
     first char have been changed to '*', except do not change the
     first char itself. e.g. 'babble' yields 'ba**le' Assume that the
     string is length 1 or more.
-
     >>> fix_start('babble')
     'ba**le'
     >>> fix_start('aardvark')
@@ -56,6 +62,13 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    l = list(s)
+    first = l(0)
+    for i in range(1, len(l)):
+        if l[i] == first:
+            l[i] = '*'
+    result_str = ''.join(l)
+    return(result_str)
     raise NotImplementedError
 
 
@@ -64,7 +77,6 @@ def mix_up(a, b):
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
     each string. Assume a and b are length 2 or more.
-
     >>> mix_up('mix', 'pod')
     'pox mid'
     >>> mix_up('dog', 'dinner')
@@ -74,6 +86,13 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    l1 = list(a)
+    l2 = list(b)
+    temp = l1[0]
+    l1[0] = l2[0]
+    l2[0] = temp
+    final_string = ''.join(l1) + " " + ''.join(l2)
+    return(final_string)
     raise NotImplementedError
 
 
@@ -83,7 +102,6 @@ def verbing(s):
     Unless it already ends in 'ing', in which case add 'ly' instead.
     If the string length is less than 3, leave it unchanged. Return
     the resulting string.
-
     >>> verbing('hail')
     'hailing'
     >>> verbing('swiming')
@@ -91,6 +109,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    if len(s) < 3:
+        return(s)
+    else:
+        if s[-3:] == "ing"
+            return(s + 'ly')
+        else:
+            return(s + 'ing')
     raise NotImplementedError
 
 
@@ -101,7 +126,6 @@ def not_bad(s):
     'not'...'bad' substring with 'good'. Return the resulting string.
     So 'This dinner is not that bad!' yields: 'This dinner is
     good!'
-
     >>> not_bad('This movie is not so bad')
     'This movie is good'
     >>> not_bad('This dinner is not that bad!')
@@ -111,6 +135,13 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    not_index = s.find("not")
+    bad_index = s.find("bad")
+    if not_index == -1 or not_index > bad_index:
+        return(s)
+    else:
+        final_string = s.replace(s[not_index:bad_index+3], 'good')
+        return(final_string)
     raise NotImplementedError
 
 
@@ -122,7 +153,6 @@ def front_back(a, b):
     'abcde', the front half is 'abc', the back half 'de'. Given 2
     strings, a and b, return a string of the form a-front + b-front +
     a-back + b-back
-
     >>> front_back('abcd', 'xy')
     'abxcdy'
     >>> front_back('abcde', 'xyz')
@@ -130,4 +160,22 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+
+    la = len(a)
+    lb = len(b)
+    if la % 2 == 0: #even
+        a_front = a[0:la/2]
+        a_back = a[la/2:la]
+    else:          #odd
+        a_front = a[0:la/2+1]
+        a_back = a[la/2+1:la]
+
+    if lb % 2 == 0: #even
+        b_front = b[0:lb/2]
+        b_back = b[lb/2:lb]
+    else:          #odd
+        b_front = b[0:lb/2+1]
+        b_back = b[lb/2+1:lb]
+    return(a_front + b_front + a_back + b_back)
+
     raise NotImplementedError
