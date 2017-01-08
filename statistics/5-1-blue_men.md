@@ -1,7 +1,8 @@
 [Think Stats Chapter 5 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2006.html#toc50) (blue men)
 
 >> 34.2% of the male US population is elgible to join the Blue Man group. The difference of the CDF's between the 2 height limits gives the percentage of men in the required range.
-```python
+
+```python  
 from __future__ import print_function, division  
 import pandas as pd  
 import numpy as np    
