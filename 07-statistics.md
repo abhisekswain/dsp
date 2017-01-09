@@ -89,7 +89,6 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 How do frequentist and Bayesian statistics compare?
 
 >> The frequentist approach is based on the premise that each each parameter has only one true value and conduct experiements to determine the value of the parameter correctly with a certain probability. As a result, the frequentist approach is based primarily on determining confidence intervals. The Bayesian approach on the other hand formulates the problem by assuming that a parameter's value has been chose by sampling a probability distribution, known as the prior probability distribution.  This "prior" might be known or it might be an assumption. We collect some data, and then calculate the probability of different values of the parameter given the data.  
-
 I was first inntroduced to Bayesian statistics while studying detection and estimation, where the state of a system at time t is used to project the state at time t+1. While frequentist method is commonly taught in most statistics courses I think its difficult to compare them. These are different schools of thought and there are endless arguments on which one is better. 
 
 
